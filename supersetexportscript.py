@@ -202,7 +202,7 @@ def importdashboard():
     importsession=requests.Session()
     refresh_token2,access_token2=get_access_token(importsession,domain2,password2,username2)
     dashboardid2=get_dashboards_id(access_token2,dashboardname,domain2,importsession)
-    if (len(dashdoardid1)>0):      
+    if (len(dashboardid1)>0):      
         if (len(dashboardid2)>0):    
             export_dashboards(access_token2, dashboardid2, "./",domain2,importsession,"dashboard2")
             updatedashboard("./dashboard1.zip","./dashboard2.zip")
